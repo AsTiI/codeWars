@@ -19,30 +19,7 @@
 // +5 dog years for each year after that
 
 var humanYearsCatYearsDogYears = function(humanYears) {
-    let a = [0,0,0]
-    console.log(a)
-    for(let i=1; i<humanYears+1; i++){
-        for(let j=0; j<3; j++){
-            if(i==1)
-                switch(j){
-                    case 0: a[j]++;break;
-                    case 1: a[j]+=15;break;
-                    case 2: a[j]+=15;break;
-                }
-            if(i==2)
-                switch(j){
-                    case 0: a[j]++;break;
-                    case 1: a[j]+=9;break;
-                    case 2: a[j]+=9;break;
-                }
-            if(i>2)
-                switch(j){
-                    case 0: a[j]++;break;
-                    case 1: a[j]+=4;break;
-                    case 2: a[j]+=5;break;
-                }
-        }
-    }
-    console.log(a)
-    return a;
+    if (y == 1) return [1, 15, 15]
+    if (y == 2) return [2, 24, 24]
+    return [y, (y-2) * 4 + 24, (y-2) * 5 + 24]
 }
