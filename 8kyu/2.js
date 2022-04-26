@@ -4,11 +4,7 @@
 // in a lot of numbers at random places in the text.
 
 function stringClean(s){
-    return s.split('').map(el => {
-        if(el == ' ')
-            return ' '
-        else
-            return !isNaN(el)? '': el
-    }).join('')
+    return s.replace(/[0-9]/g, '');
+    // return s.replace(/\d/g, "");
 }
 console.log(stringClean("Dsa32 cdsc34232 csa!!! 1I 4Am cool!"))
