@@ -8,15 +8,7 @@
 //     arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 function arrayDiff(a, b) {
-    b.map(el => {
-        for(let i = 0; i < a.length; i++){
-            if(a[i] === el){
-                a.splice(i, 1);
-                i--
-            }
-        }
-    })
-    return a
+    return a.filter(e => !b.includes(e));
 }
 
 console.log(arrayDiff([1,2,2,3,4,3,4],[2,3]))
