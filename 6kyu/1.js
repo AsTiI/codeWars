@@ -3,7 +3,7 @@
 // 0 and 255, inclusive.
 
 function isValidIP(str) {
-    return /^(25[0-5]|2[0-4][0-9]|[1][0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[1][0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[1][0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|[1][0-9][0-9]|[1-9]?[0-9])$/.test(str);
+    return str.split('.').filter(function(v){return v===Number(v).toString() && Number(v)<256}).length===4;
 }
 
 console.log(isValidIP('1.2.123.123'))
