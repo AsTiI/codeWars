@@ -4,11 +4,10 @@
 
 function persistence(num) {
     let count = 0;
-    while(num >= 10){
+    for(; num > 9; count++){
         num = num.toString().split('').reduce(function(previousValue, currentValue) {
             return previousValue * currentValue;
         })
-        count ++
     }
     return count
 }
